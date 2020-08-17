@@ -27,6 +27,33 @@
         ></b-form-input>
       </b-form-group>
 
+      <b-form-group id="input-group-2" label="Your phone number:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="form.phone"
+          required
+          placeholder="Enter phone"
+        ></b-form-input>
+      </b-form-group>
+
+      <b-form-group id="input-group-2" label=" Chose date of today:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="form.date"
+          required
+          placeholder="Enter date of today:"
+        ></b-form-input>
+      </b-form-group>
+      
+      <b-form-group id="input-group-2" label="Your Table number:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="form.table"
+          required
+          placeholder="Enter your table number:"
+        ></b-form-input>
+      </b-form-group>
+
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
@@ -44,6 +71,9 @@ name: "Form",
             form: {
                 name: '',
                 email: '',
+                phone: '',
+                date: '',
+                table: ''
             }
         }
     }
@@ -58,6 +88,10 @@ name: "Form",
         // Reset our form values
         this.form.email = ''
         this.form.name = ''
+        this.form.phone = ''
+        this.form.date = ''
+        this.form.table = ''
+
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
