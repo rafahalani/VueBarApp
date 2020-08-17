@@ -3,6 +3,8 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { FormPlugin } from 'bootstrap-vue'
+Vue.use(FormPlugin)
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);
